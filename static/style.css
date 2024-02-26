@@ -13,56 +13,49 @@ body {
     background-attachment: fixed;
 }
 
-/* header {
-    padding: 1rem;
-    width: 100%; 
-    position: fixed; 
-    top: 0;
-    left: 0;
-    z-index: 1000; 
-}  */
+
 .site-title {
-    position: fixed; /* Fixed position to keep it at the top */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    padding: 1rem; /* Add some padding */
-    font-size: 1.5rem; /* Adjust the font size as needed */
-    z-index: 20; /* Ensure it's above other content */
-    background: none; /* No background */
-    color: #f0f0f0; /* Adjust the color as needed */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    padding: 1rem;
+    font-size: 2.2rem; 
+    z-index: 20; 
+    background: none; 
+    color: #f0f0f0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #sidebar {
-    color: white; /* Set text color to white */
-    background: none; /* No background color */
-    position: fixed; /* Fixed position */
-    top: 50%; /* Start at the middle of the page */
-    transform: translateY(-50%); /* Center it vertically */
+    color: white; 
+    background: none;
+    position: fixed; 
+    top: 50%; 
+    transform: translateY(-50%);
     left: 0;
-    width: 200px; /* Set a fixed width */
-    z-index: 10; /* Ensure it's above the main content */
-    padding: 1rem; /* Add some padding */
+    width: 200px; 
+    z-index: 10; 
+    padding: 1rem; 
 }
 
 #sidebar a {
-    color: inherit; /* Ensure links are white */
-    text-decoration: none; /* Optional: Removes underline from links */
-    display: block; /* Makes the links fill the container */
-    margin: 0.5rem 0; /* Adds some vertical spacing between links */
+    color: inherit; 
+    text-decoration: none; 
+    display: block; 
+    margin: 0.5rem 0; 
 }
 
 #sidebar .button {
-    background-color: transparent; /* No background for buttons */
-    color: white; /* Text color for buttons */
-    border: none; /* No borders */
+    background-color: transparent; 
+    color: white; 
+    border: none; 
 }
 
 #main-content {
     flex-grow: 1; 
     padding: 2rem; 
-    margin-left: 200px; 
     margin-top: 60px; 
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 
@@ -84,24 +77,4 @@ div {
     background-color: rgba(255, 255, 255, 0.75);
     color: #333;
 }
-/* .blog-post {
-    background-color: #fff;
-    color: #333;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 60%; 
-    margin: 2rem auto; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-} */
-
-/* #landing-content {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    width: 80%; 
-}   */
 

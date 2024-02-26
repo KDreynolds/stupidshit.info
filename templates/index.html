@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StupidShit.Info</title>
-    <!-- Include Bulma CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/style.css">
     <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
 </head>
@@ -15,11 +17,12 @@
         <div class="columns" style="margin-left: 200px;">
         <aside class="column is-2 section" id="sidebar">
             <!-- Sidebar content here -->
-            <a class="button is-white is-fullwidth" href="#" hx-get="/home" hx-trigger="click" hx-target="#main-content">Home</a>
+            <a class="button is-white is-fullwidth" href="#" hx-get="/landing" hx-trigger="click" hx-target="#main-content">Home</a>
             <a class="button is-white is-fullwidth" href="#" hx-get="/contact" hx-trigger="click" hx-target="#main-content">Contact</a>
+            <a class="button is-white is-fullwidth" href="#" hx-get="/about" hx-trigger="click" hx-target="#main-content">About</a>
             <!-- Add more navigation links as needed -->
         </aside>
-        <div class="column is-10" id="main-content" style="margin-right: 400px;" hx-get="/landing" hx-trigger="load" hx-target="#main-content">
+        <div class="column is-10" id="main-content"  hx-get="/landing" hx-trigger="load" hx-target="#main-content">
             <!-- The content from /landing will be loaded here -->
         </div>
     </div>

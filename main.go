@@ -27,9 +27,12 @@ func main() {
 		c.String(http.StatusOK, "We are so back!")
 	})
 
+	r.GET("/about", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "about.html", gin.H{})
+	})
+
 	r.GET("/landing", func(c *gin.Context) {
-		// Assuming your JSON file is named "posts.json" and located in the root directory
-		file, err := os.ReadFile("posts.json") // Use os.ReadFile instead of ioutil.ReadFile
+		file, err := os.ReadFile("posts.json")
 		if err != nil {
 			log.Fatalf("Unable to read the JSON file: %v", err)
 		}
