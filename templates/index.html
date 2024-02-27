@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StupidShit.Info</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -12,7 +13,15 @@
     <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="site-title">stupidshit.info</div>
+    <div class="background-image"></div>
+    <div class="site-title">
+        <a href="#" hx-get="/landing" hx-trigger="click" hx-target="#main-content" style="color: white; text-decoration: none;">StupidShit.info</a>
+    </div>
+    <div class="bmc-button-container">
+        <a href="https://www.buymeacoffee.com/kdreynolds">
+            <img src="https://img.buymeacoffee.com/button-api/?text=&emoji=🤑&slug=kdreynolds&button_colour=5F7FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" alt="Gimme Some Money" />
+        </a>
+    </div>
     <div class="container is-fluid">
         <div class="columns" style="margin-left: 200px;">
         <aside class="column is-2 section" id="sidebar">
@@ -20,6 +29,7 @@
             <a class="button is-white is-fullwidth" href="#" hx-get="/landing" hx-trigger="click" hx-target="#main-content">Home</a>
             <a class="button is-white is-fullwidth" href="#" hx-get="/contact" hx-trigger="click" hx-target="#main-content">Contact</a>
             <a class="button is-white is-fullwidth" href="#" hx-get="/about" hx-trigger="click" hx-target="#main-content">About</a>
+            <a class="button is-white is-fullwidth" href="https://kdreynolds.github.io" target="_blank">Portfolio</a>
             <!-- Add more navigation links as needed -->
         </aside>
         <div class="column is-10" id="main-content"  hx-get="/landing" hx-trigger="load" hx-target="#main-content">
@@ -27,4 +37,17 @@
         </div>
     </div>
 </body>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <a href="https://twitter.com/imyerf" target="_blank" class="social-icon">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kyle-reynolds-08b52094" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/kdreynolds" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</footer>
 </html>

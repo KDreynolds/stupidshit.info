@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row; 
+    flex-direction: column; 
     align-items: flex-start; 
     justify-content: flex-start; 
     height: 100vh; 
@@ -11,8 +11,29 @@ body {
     background-image: url('background.jpg');
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
+.contact-form-container {
+    background-color: white; /* White background */
+    padding: 2rem; /* Padding around the form */
+    margin-top: 2rem; /* Space from the top */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure it stays behind all other content */
+}
 
 .site-title {
     position: fixed; 
@@ -74,7 +95,103 @@ div {
     width: 80%;
     margin: 2rem auto; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.75);
-    color: #333;
+    background-color: rgba(255, 255, 255, 0.75); 
+    overflow: auto; 
 }
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+
+html {
+    scrollbar-width: thin; /* 'auto', 'thin', or 'none' */
+    scrollbar-color: #888 #f1f1f1; /* thumb and track color */
+}
+
+.small-bold {
+    font-size: 0.8em; 
+    font-weight: 600; 
+    padding-bottom: 10px;
+}
+
+/* For Webkit browsers */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* The track of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* The scroll handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Handle on hover */
+}
+
+.bmc-button-container {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 10px; /* Distance from the top of the viewport */
+    right: 10px; /* Distance from the right of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Style the image within the .bmc-button-container if needed */
+.bmc-button-container img {
+    /* Add any specific styles you want for the button image here */
+    height: auto; /* For example, adjust the height */
+    width: auto; /* Adjust the width as needed */
+}
+
+.bmc-button {
+    text-decoration: none;
+    background-color: #ff813f;
+    color: white;
+    padding: 0.5rem; /* Adjust padding to reduce size */ /* Make it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide overflow to maintain circular shape */
+}
+
+.bmc-button img {
+    height: auto; /* Adjust height to auto so it scales with the width */
+    width: 40px; /* Adjust width to your preference for size */
+}
+
+
+.bmc-button span {
+    margin-left: 15px;
+    font-size: 28px;
+}
+
+.bmc-button:hover {
+    background-color: #ff9b57;
+}
+
+.footer {
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.social-icon {
+    color: #fff; /* Icon color */
+    margin: 0 10px;
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #1DA1F2; /* Twitter blue for hover effect, change as needed */
+}
+
 
