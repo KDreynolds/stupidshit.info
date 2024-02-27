@@ -35,6 +35,16 @@ func main() {
 	// r.LoadHTMLGlob("templates/*") // Remove this line
 	r.Static("/static", "./static")
 
+	r.Use(func(c *gin.Context) {
+		if c.Request.Header.Get("X-Forwarded-Proto") != "https" {
+			secureUrl := "https://" + c.Request.Host + c.Request.RequestURI
+			c.Redirect(http.StatusPermanentRedirect, secureUrl)
+			c.Abort()
+		} else {
+			c.Next()
+		}
+	})
+
 	funcMap := template.FuncMap{
 		"dateFormat": formatDate,
 	}
