@@ -80,6 +80,8 @@ body {
 }
 
 
+
+
 .link-container {
     display: flex;
     justify-content: space-between;
@@ -92,11 +94,12 @@ div {
 }
 
 .card {
-    width: 80%;
-    margin: 2rem auto; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.75); 
-    overflow: auto; 
+    margin: 1rem auto; /* Center cards and add margin on all sides */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add some shadow for depth */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    overflow: hidden; /* Ensures no content spills outside the card */
+    width: auto; /* Default width to auto for flexibility */
+    max-width: 90%; /* Maximum width to ensure cards are not too wide on larger screens */
 }
 
 body, html {
@@ -194,6 +197,12 @@ html {
     color: #1DA1F2; /* Twitter blue for hover effect, change as needed */
 }
 
+@media (min-width: 769px) {
+    .columns {
+        margin-left: 200px; /* Apply margin on larger screens */
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     body {
@@ -207,27 +216,30 @@ html {
         width: 100%;
         text-align: center;
     }
+    .columns {
+        margin-left: 0; /* Remove margin on mobile screens */
+    }
+
+    #main-content {
+        width: 100%; /* Full width */
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center align the flex items */
+        margin-top: 0; /* Remove any top margin if present */
+    }
 
     #sidebar {
-        order: 1; /* Move the sidebar to the top on mobile */
-        display: flex;
-        justify-content: center;
-        padding: 0;
-        margin-top: 1rem;
+        display: none;
     }
 
     #sidebar a {
-        margin: 0 10px; /* Space out sidebar links */
+        margin: 0 10px; 
     }
 
-    .container.is-fluid, .columns {
+    .container.is-fluid, .columns, .column.is-10 {
         margin-left: 0;
-        padding: 0 15px;
-    }
-
-    .column.is-2, .column.is-10 {
-        width: 100%;
         padding: 0;
+        width: 100%;
     }
 
     .contact-form-container, .card {
@@ -237,12 +249,23 @@ html {
 
     .bmc-button-container {
         top: auto;
-        bottom: 10px; /* Move the button to the bottom on mobile */
+        bottom: 10px;
     }
 
     .footer {
-        position: relative; /* Adjust footer positioning on mobile */
+        position: relative;
     }
+
+    .card {
+        margin: 1rem; /* Add margin around the card */
+        width: calc(100% - 2rem); /* Full width minus the margin */
+        max-width: 100%; /* Override any max-width set previously */
+    }
+
+    .card-content {
+        padding: 1rem;    
+    }
+    
 }
 
 
