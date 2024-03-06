@@ -1,5 +1,10 @@
 [
     {
+        "title": "Reading Other Peoples Code is Super Important",
+        "content": "One oft overlooked skill in the repertoire of the software developer, is reading other peoples code. Much like reading new authors and/or books, you never really know what sort of things will turn out to be inspiring to you. Today I was just really impressed with the comments in a particular codebase and it made me completely rethink the way i comment in my code. It's hard to really put a cap on the sort of things you can improve in your own code this way, they are endless, ranging from minuscule to monumental. Maybe this is just so obvious to me because I spend so much time in the Open Source world but think of it like taking a mental walk every once in awhile. Read a codebase you have nothing to do with just for fun.",
+        "date": "2024-03-05T12:22:00Z"
+    },
+    {
         "title": "Thoughts on Clean Code and Other Dogmatic Bullshit",
         "content": "From the title there you can probably guess how I feel about 'Clean Code' and other similar, dogmatic approaches to writing code/software. I think largely these type of approaches quickly lose sight of the original goals you had in writing your code and quickly turn into a snake eating it's own tail. For some reason I am always reminded of one of my favorite Kurt Vonnegut ideas when I think about the problems with Clean Code and similar approaches, In A Man Without a Country, Vonnegut discusses how Bepop Jazz influenced his style of writing in that it pushed him to break every rule he could think of. It is a lot easier to parse what rules are actually important and what rules can be tossed aside when you just go out and break them all. I think my point is, Do not take these dogmatic, over-arching musings as gospel, go out and break some shit so you have the experience under your belt.",
         "date": "2024-03-03T12:22:00Z"
