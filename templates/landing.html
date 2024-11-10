@@ -1,11 +1,11 @@
 <div id="landing-content" class="section">
-    {{range .Posts}}
+    {% for post in posts %}
     <div class="card">
         <div class="card-content">
-            <p class="title">{{.Title}}</p>
-            <p class="date small-bold">{{dateFormat .Date}}</p>
-            <p class="content">{{.Content}}</p>
+            <p class="title">{{ post['title'] }}</p>
+            <p class="date small-bold">{{ post['date']|date_format }}</p>
+            <p class="content">{{ post['content'] }}</p>
         </div>
     </div>
-    {{end}}
+    {% endfor %}
 </div>
